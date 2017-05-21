@@ -1,39 +1,18 @@
-<?php get_header(); ?>  
+<?php get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <header>
-
-                <h1><?php bloginfo('name'); ?></h1>
+                <h1><?php the_title(); ?></h1>
             </header>
-            
 
             <main>
-                <div id="posts">
-                <?php
-                if (have_posts()) :
-                    while (have_posts()) :
-                        the_post();
-                ?>
-
-                <div class="post">
-                    <div class="post-header">
-                        <h2>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </h2>
-                    </div>
-                    <div class="post-content">
-                        <?php the_content(); ?>
-                    </div>
-                </div><!-- /post -->
-
-                <?php
-                    endwhile;
-                else:
-                ?>
-
-                <p>ページはありません！</p>
-
-                <?php
-                endif;
-                ?>
-                </div>
+                <article>
+                    <?php print_r(get_post($post->post_parent)); ?>
+                    <?php the_content(); ?>
+                </article>
             </main>
-<?php get_footer(); ?>
+<?php endwhile; else: ?>
+
+    <p>記事はありません！</p>
+
+<?php endif; ?>
+<?php get_footer();
