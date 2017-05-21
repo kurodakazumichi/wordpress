@@ -9,7 +9,7 @@
             </header>
 
             <main>
-                <article>
+                <article class="clearfix">
                     <?php the_content(); ?>
                 </article>
             </main>

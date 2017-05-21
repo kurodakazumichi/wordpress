@@ -10,3 +10,40 @@ Stack trace:
 #7 {main}
   thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 12
 [20-May-2017 21:48:43 UTC] PHP Warning:  filemtime(): stat failed for D:\Server\www\sample\public\wordpress/wp-content/themes/yurpro/css/style-single.css in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 15
+[21-May-2017 02:53:24 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 14
+[21-May-2017 02:53:24 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 14
+[21-May-2017 02:53:24 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 14
+[21-May-2017 02:53:24 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 14
+[21-May-2017 02:57:17 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:15
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 15
+[21-May-2017 02:57:19 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:15
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 15
+[21-May-2017 02:57:24 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:15
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 15

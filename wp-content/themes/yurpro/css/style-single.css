@@ -55,9 +55,9 @@ header p {
 }
 
 header p a{
-    color :var(--link-text-color);
+    color: var(--link-text-color);
 }
 
 header p a:hover {
-    color :var(--link-text-color-h);
+    color: var(--link-text-color-h);
 }

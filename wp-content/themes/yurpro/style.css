@@ -180,6 +180,10 @@ article h3{
     margin-top      : 40px;
 }
 
+article h3:first-child{
+    margin-top:0;
+}
+
 article h3:before { /* アイコン */
     background          : var(--h3-bg);
     color               : var(--h3-icon-text);

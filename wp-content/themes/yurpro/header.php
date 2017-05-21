@@ -10,9 +10,11 @@
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>">
         
         <?php if(is_single()): ?>
-            <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style-single.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/css/style-single.css'); ?>">
+            <?php load_css("/css/style-single.css"); ?>
+            <?php if(in_category('summary')){ load_css("/css/style-category-summary.css"); } ?>
+        
         <?php else: ?>
-            <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style-index.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/css/style-index.css'); ?>">
+            <?php load_css("/css/style-index.css"); ?>
         <?php endif; ?>
     </head>
     <body>
@@ -20,7 +22,7 @@
         <div id="wrapper">
            
             <nav class="clearfix">
-                <p class="logo"><a href="<?php echo home_url('/');?>"><?php bloginfo('name'); ?></a></p>
+                <p class="logo"><a href="<?php echo home_url('/');?>"><?php bloginfo('name'); ?></a><?php edit_post_link(); ?></p>
                 <?php wp_nav_menu(); ?>
-            </nav>     
+            </nav>
 
