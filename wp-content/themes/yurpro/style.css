@@ -1,0 +1,421 @@
+/**
+ * CSS変数
+ */
+/*******************************************************************************
+ * 変数
+ ******************************************************************************/
+/* 配色データ */
+:root{
+    /* BODY */
+    --body-bg               : #F3ECE1;
+    
+    /* ナビ */
+    --nav-bg                : #008348;
+    --nav-link-text-color   : #fff;
+    --nav-link-text-color-h : #EDAD0B;
+    --nav-list-border-color : #EDAD0B;
+    
+    /* ヘッダー */
+    --header-bg             : linear-gradient(-45deg, #eeeeeb 25%, #fcfcff 25%, #fcfcff 50%, #eeeeeb 50%, #eeeeeb 75%, #fcfcff 75%, #fcfcff);
+    --header-text-color     : #444;
+    
+    /* メイン */
+    --main-bg               : #F3ECE1;
+    
+    /* 記事 */
+    --article-bg            : #f8f5f1;
+    --article-border-color  : #e1e1e1;
+    
+    /* フッター */
+    --footer-bg             : #CFE6DC;
+    --footer-text-color     : #222;
+    
+    /* 汎用色 */
+    --text-color            : #222;
+    --link-text-color       : #008348;
+    --link-text-color-h     : #EDAD0B;
+
+    --h2-bg                 : linear-gradient(-45deg, #eeeeeb 25%, #fcfcff 25%, #fcfcff 50%, #eeeeeb 50%, #eeeeeb 75%, #fcfcff 75%, #fcfcff);
+    --h2-text               : #222;
+    --h2-border             : #008348;
+    --h3-bg                 : #008348;
+    --h3-text               : #222;
+    --h3-icon-text          : white;
+    --h4-text               : #2D466E;
+    --list-mark             : #D59B0A;
+    --list-mark-text        : white;
+    --strong-text           : #B94E8A;
+    --em-text               : #222;
+    --em-bg                 : #C9E8F1;
+    --quote-bg              : #FFF;
+    --quote-shadow          : rgba(0,0,0,.2);
+    --quote-border          : #CCC;
+    --table-border          : #1C563C;
+    --table-head-bg         : #AFD3C3;
+    --table-head-text       : #222;
+    --table-cell-bg         : #fefefe;  
+    --abbr-border           : #D2D774;
+    --code-text             : #222;
+    --code-bg               : #CCC;    
+}
+
+/*******************************************************************************
+ * 背景の定義 
+ ******************************************************************************/
+/* 全体 */
+body{
+    background :var(--body-bg);
+}
+
+/* サイトナビ */
+nav{
+    background :var(--nav-bg);
+}
+
+/* ヘッダ */
+header {
+    background :var(--header-bg);
+    background-size: 15px 15px;    
+}
+
+/* メイン */
+main {
+    background:var(--main-bg);
+}
+
+/* 記事 */
+article {
+   background: var(--article-bg);
+}
+
+/* フッター */
+footer {
+    background:var(--footer-bg);
+}
+
+
+/*******************************************************************************
+ * サイト全体の定義
+ ******************************************************************************/
+body
+{
+    font-family     :'Rounded Mplus 1c', serif;
+    color           :var(--text-color);
+    font-size       :25px;
+}
+
+/*******************************************************************************
+ * ナビの定義
+ ******************************************************************************/
+nav p.logo{
+    letter-spacing  :10px;
+    line-height     :60px;
+    text-indent     :20px;
+    float           :left;
+}
+
+nav ul {
+    float:right;
+}
+
+nav ul li {
+    float           :left;
+    line-height     :36px;
+    font-size       :24px;
+    padding         :0 15px;
+    margin          :12px 0;
+    border-right    :4px dotted var(--nav-list-border-color);
+}
+
+nav a {
+    text-decoration : none;
+    color           : var(--nav-link-text-color);
+}
+
+nav a:hover {
+    color   :var(--nav-link-text-color-h);
+}
+
+nav ul li:last-child {
+    border  :none;
+}
+
+/*******************************************************************************
+ * 記事の定義
+ ******************************************************************************/
+article {
+    width   :70%;
+    margin  :50px auto;
+    padding :36px;
+    border  :1px solid var(--article-border-color);
+}
+
+/* 見出し２ */
+article h2 {
+    border-left     : 6px solid var(--h2-border);
+    border-bottom   : 1px solid var(--h2-border);
+    background      : var(--h2-bg);
+    color:          : var(--h2-text);
+    font-size       : 36px;
+    line-height     : 60px;
+    font-weight     : bold;
+    text-indent     : 10px;
+    margin-bottom   : 50px;
+    background-size : 300px 300px;
+    margin-top      : 150px;
+}
+
+article h2:first-child{
+    margin-top:0;
+}
+
+/* 見出し３ */
+article h3{
+    color:          : var(--h3-text);
+    position        : relative;
+    padding-left    : 43px;
+    font-size       : 32px;
+    font-weight     : bold;
+    margin-bottom   : 10px;
+    margin-top      : 40px;
+}
+
+article h3:first-child{
+    margin-top:0;
+}
+
+article h3:before { /* アイコン */
+    background          : var(--h3-bg);
+    color               : var(--h3-icon-text);
+    position            : absolute;
+    font-family         : FontAwesome;
+    content             : "\f063";
+    font-weight         : normal;
+    font-size           : 18px;
+    border-radius       : 50%;
+    width               : 30px;
+    height              : 30px;
+    line-height         : 32px;
+    top                 : 50%;
+    left                : 0;
+    text-align          : center;
+    
+    -moz-transform      : translateY(-50%);
+    -webkit-transform   : translateY(-50%);
+    -ms-transform       : translateY(-50%);
+    transform           : translateY(-50%);
+}
+
+article h3:after { /*吹き出しのちょこんと出た部分*/
+    border-left         : 12px solid var(--h3-bg);;
+    content             : '';
+    display             : block;
+    position            : absolute;
+    left                : 26px;
+    height              : 0;
+    width               : 0;
+    border-top          : 7px solid transparent;
+    border-bottom       : 7px solid transparent;
+    top                 : 50%;
+    -moz-transform      : translateY(-50%);
+    -webkit-transform   : translateY(-50%);
+    -ms-transform       : translateY(-50%);
+    transform           : translateY(-50%);
+}
+
+article h4 {
+    color           : var(--h4-text);
+    font-size       : 28px;
+    font-weight     : bold;
+    margin-bottom   : 10px;
+    margin-top      : 40px;
+    
+}
+
+/* 段落 */
+article p{
+    margin-bottom:30px;
+}
+
+/* 太字 */
+article strong {
+    font-weight : bold;
+    color       : var(--strong-text);
+}
+
+article em {
+    color       :var(--em-text);
+    background  :var(--em-bg);
+    padding     :0 5px;
+}
+
+/* リンク */
+article a{
+    text-decoration : none;
+    color           : var(--link-text-color);
+}
+
+article a:hover{
+    color : var(--link-text-color-h);
+}
+
+/* リスト */
+article ul{
+    margin-left:30px;
+}
+
+article ul > li {
+    list-style-type : none;
+    margin-bottom   : 10px;
+}
+
+article ul > li:before {
+    background      : var(--list-mark);
+    content         : '';
+    width           : 12px;
+    height          : 12px;
+    display         : inline-block;
+    border-radius   : 100%;
+    position        : relative;
+    left            : -15px;
+    top             : -3px;
+}
+
+/* 数字付きリスト */
+article ol {
+    counter-reset: li;
+}
+ 
+article ol > li {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+}
+ 
+article ol > li:before {
+    background          : var(--list-mark);
+    color               : var(--list-mark-text);
+    counter-increment   : li;
+    content             : counter(li);
+    font-size           : 22px;
+    border-radius       : 50%;
+    text-align          : center;
+    width               : 28px;
+    height              : 28px;
+    position            : absolute;
+    left                : 0px;
+    top                 : 4px;
+    line-height         : 28px;
+}
+
+/* 定義リスト */
+article dl dt {
+    position: relative;
+    padding-left: 43px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+article dl dt:before { /* アイコン */
+    background          : var(--list-mark);
+    color               : var(--list-mark-text);
+    position            : absolute;
+    font-family         : FontAwesome;
+    content             : "\f02d";
+    font-weight         : normal;
+    font-size           : 16px;
+    border-radius       : 50%;
+    left                : 0;
+    width               : 30px;
+    height              : 30px;
+    line-height         : 30px;
+    text-align          : center;
+    top                 : 50%;
+    -moz-transform      : translateY(-50%);
+    -webkit-transform   : translateY(-50%);
+    -ms-transform       : translateY(-50%);
+    transform           : translateY(-50%);
+}
+
+article dl dd {
+    margin:0 0 15px 45px;
+}
+
+/* 引用 */
+blockquote {
+    background      : var(--quote-bg);
+    box-shadow      : 0px 1px 3px var(--quote-hadow);
+    border          : 1px solid var(--quote-border);
+    position        : relative;
+    margin          : 10px 0;
+    padding         : 20px;
+    font-size       : .9em;
+    border-radius   : 2px;
+}
+
+blockquote:before {
+    position    : absolute;
+    top         : 15px;
+    left        : 20px;
+    content     : '“';
+    font-size   : 30px;
+    opacity     : .1;
+}
+
+/* 表 */
+article table {
+    border-top  :1px solid var(--table-border);
+    border-left :1px solid var(--table-border);
+}
+
+article table tr td,article table tr th {
+    border-right    : 1px solid var(--table-border);
+    border-bottom   : 1px solid var(--table-border);
+    background      : var(--table-cell-bg);
+    padding         : 5px;
+    vertical-align  : top;
+}
+
+article table tr th {
+    background  : var(--table-head-bg);
+    color       : var(--table-head-text);
+    font-weight : bold;    
+}
+
+/* 略語 */
+article abbr {
+    text-decoration : none;
+    border-bottom   :2px dashed var(--abbr-border);
+}
+
+
+/* コード */
+article code {
+    padding     :10px;
+    background  :var(--code-bg);
+    color       :var(--code-text);
+}
+
+/*******************************************************************************
+ * フッターの定義
+ ******************************************************************************/
+footer {
+    color:var(--footer-text-color);
+    padding:10px;
+    text-align:center;
+}
+
+
+
+/*******************************************************************************
+ * 共通クラス
+ ******************************************************************************/
+
+/* 回り込み解除 */
+.clearfix:after{
+    display:block;
+    clear:both;
+    height:0px;
+    visibility: hidden;
+    content:".";
+}
