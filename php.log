@@ -47,3 +47,213 @@ Stack trace:
 #6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
 #7 {main}
   thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 15
+[21-May-2017 21:57:50 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 32
+[21-May-2017 21:59:08 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php:29
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include()
+#1 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#3 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 29
+[21-May-2017 21:59:36 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php:29
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include()
+#1 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#3 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 29
+[21-May-2017 21:59:50 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 29
+[21-May-2017 22:04:17 UTC] WordPress データベースエラー: Unknown column 'date' in 'order clause' for query SELECT post_title FROM wp_posts where post_status = 'publish' order by date desc made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php')
+[21-May-2017 22:05:25 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc' at line 1 for query SELECT post_title FROM wp_posts where post_status = 'publish' and post_type = 'post' order by desc made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php')
+[22-May-2017 16:37:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function load_css() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:37:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function load_css() on null in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:37:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function load_css() on null in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:38:25 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:43:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function load_css() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:43:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function load_css() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:43:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function load_css() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:47:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Fund' not found in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:22
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-settings.php(425): include()
+#1 D:\Server\www\sample\public\wordpress\wp-config.php(92): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\wp-load.php(37): require_once('D:\\Server\\www\\s...')
+#3 D:\Server\www\sample\public\wordpress\wp-blog-header.php(13): require_once('D:\\Server\\www\\s...')
+#4 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#5 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 22
+[22-May-2017 16:48:10 UTC] PHP Warning:  filemtime(): stat failed for D:\Server\www\sample\public\wordpress/wp-content/themes/yurproaa in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 13
+[22-May-2017 16:48:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function load_css() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:48:10 UTC] PHP Warning:  filemtime(): stat failed for D:\Server\www\sample\public\wordpress/wp-content/themes/yurproaa in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 13
+[22-May-2017 16:48:44 UTC] PHP Warning:  filemtime(): stat failed for D:\Server\www\sample\public\wordpress/wp-content/themes/yurproaa in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 13
+[22-May-2017 16:48:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Fund' not found in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:48:44 UTC] PHP Warning:  filemtime(): stat failed for D:\Server\www\sample\public\wordpress/wp-content/themes/yurproaa in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 13
+[22-May-2017 16:48:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Fund' not found in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 13
+[22-May-2017 16:56:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_sc_hoge() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:29
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php(57): EX::init()
+#1 D:\Server\www\sample\public\wordpress\wp-settings.php(425): include('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\wp-config.php(92): require_once('D:\\Server\\www\\s...')
+#3 D:\Server\www\sample\public\wordpress\wp-load.php(37): require_once('D:\\Server\\www\\s...')
+#4 D:\Server\www\sample\public\wordpress\wp-blog-header.php(13): require_once('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#6 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 29
+[22-May-2017 17:01:46 UTC] PHP Parse error:  syntax error, unexpected end of file in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[22-May-2017 17:12:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function load_css() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php:17
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template.php(684): require_once()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template.php(643): load_template('D:\\Server\\www\\s...', true)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\general-template.php(45): locate_template(Array, true)
+#3 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php(1): get_header()
+#4 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#5 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#6 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#7 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 17
+[22-May-2017 18:28:40 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 40
+[22-May-2017 20:55:43 UTC] PHP Notice:  register_sidebar が<strong>誤って</strong>呼び出されました。「サイドバー 1」サイドバーの引数の配列で <code>id</code> が設定されませんでした。既定では「sidebar-1」です。<code>id</code> に「sidebar-1」を設定することでこの情報を消して、既存のサイドバーのコンテンツを保つことができます。 詳しくは <a href="http://wpdocs.osdn.jp/Debugging_in_WordPress">WordPress のデバッグ</a>をご覧ください。 (このメッセージはバージョン 4.2.0 で追加されました) in D:\Server\www\sample\public\wordpress\wp-includes\functions.php on line 4138
+[22-May-2017 21:03:05 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 118
+[22-May-2017 21:03:05 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 119
+[22-May-2017 21:03:05 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 118
+[22-May-2017 21:03:05 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 119
+[22-May-2017 21:03:55 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 118
+[22-May-2017 21:03:55 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 119
+[22-May-2017 21:03:55 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 118
+[22-May-2017 21:03:55 UTC] PHP Notice:  A non well formed numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\plugins\crayon-syntax-highlighter\crayon_formatter.class.php on line 119
+[22-May-2017 21:16:18 UTC] PHP Parse error:  syntax error, unexpected ')' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\header.php on line 36
+[22-May-2017 21:48:09 UTC] PHP Warning:  defined() expects exactly 1 parameter, 2 given in D:\Server\www\sample\public\wordpress\wp-config.php on line 94
+[22-May-2017 22:16:34 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where post_type = 'post' AND post_status='publish' ORDER BY post_date' at line 1 for query SELECT ID, post_title FROM wp_posts WHERE where post_type = 'post' AND post_status='publish' ORDER BY post_date made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php')
+[22-May-2017 22:19:06 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIG 10' at line 1 for query SELECT ID, post_title FROM wp_posts WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIG 10 made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php')
+[22-May-2017 22:24:09 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include()
+#1 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#3 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 13
+[22-May-2017 22:24:41 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php:13
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include()
+#1 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#3 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 13
+[22-May-2017 22:29:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_categories() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php:15
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include()
+#1 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#3 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php on line 15
+[22-May-2017 22:35:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_results() on null in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:67
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php(8): EX::get_new_posts()
+#1 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#3 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#4 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 67
+[22-May-2017 22:40:01 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT' at line 1 for query SELECT ID FROM  WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT 10 made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php'), EX::get_new_posts
+[22-May-2017 22:40:17 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT' at line 1 for query SELECT ID FROM  WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT 10 made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php'), EX::get_new_posts
+[22-May-2017 22:40:35 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT' at line 1 for query SELECT ID FROM  WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT 10 made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php'), EX::get_new_posts
+[22-May-2017 22:40:49 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT' at line 1 for query SELECT ID FROM  WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT 10 made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php'), EX::get_new_posts
+[22-May-2017 22:41:06 UTC] WordPress データベースエラー: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT' at line 1 for query SELECT ID FROM  WHERE post_type = 'post' AND post_status='publish' ORDER BY post_date DESC LIMIT 10 made by require('D:\Server\www\sample\public\wordpress\wp-blog-header.php'), require_once('D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php'), include('D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\index.php'), EX::get_new_posts
+[22-May-2017 23:33:58 UTC] PHP Parse error:  syntax error, unexpected '"show_count"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\page-categories.php on line 7
+[22-May-2017 23:40:12 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\page-categories.php on line 9
+[23-May-2017 00:04:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function tag_link() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\page-tags.php:5
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\template-loader.php(74): include()
+#1 D:\Server\www\sample\public\wordpress\wp-blog-header.php(19): require_once('D:\\Server\\www\\s...')
+#2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
+#3 {main}
+  thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\page-tags.php on line 5

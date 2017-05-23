@@ -1,26 +1,22 @@
 <?php get_header(); ?>
             
-<header>
-    <div>
-        <h1><?php bloginfo('name'); ?></h1>
-        <p class="description"><?php bloginfo("description"); ?></p>            
-    </div>
-</header>
-
-<main>
-    <article>
-        <h2>新着記事</h2>
-        <div id="articles" class="clearfix">
-            <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-                <dl>
-                    <dt><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dt>
-                    <dd><p style="">(<?php echo get_the_date(); ?>)【<?php the_category(', '); ?>】</p></dd>
-                </ul>
-            <?php endwhile; else: ?>
-                <p>記事はありません。</p>
-            <?php endif; ?>
-        </div>
-    </article>
-</main>
-            
+<?php
+    // 新着記事を取得
+    $posts = EX::get_new_posts();
+?>
+<h2>新着記事</h2>
+<div>
+        
+    <?php if(0 < count($posts)): ?>
+        <dl>    
+            <?php foreach($posts as $post): ?>
+                <dt><a href="<?php the_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></dt>
+                <dd>(<?php echo get_the_date("", $post->ID); ?>)【<?php the_category(', ', "", $post->ID); ?>】</dd>
+            <?php endforeach; ?>
+        </dl>
+    <?php else: ?>
+         <p>記事はありません。</p>
+    <?php endif; ?>
+</div>
+   
 <?php get_footer();
