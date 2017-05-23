@@ -32,9 +32,16 @@
     
     /* 汎用色 */
     --text-color            : #222;
+    --text-neg-color        : #efefef;
     --link-text-color       : #008348;
     --link-text-color-h     : #EDAD0B;
 
+    /* ページカラー */
+    --page-default-bg     : #1A9D8E;
+    --page-single-bg      : #008348;
+    --page-category-bg    : #1A9D8E;
+    --page-tag-bg         : #4B75B9;
+    
     --h2-bg                 : linear-gradient(-45deg, #eeeeeb 25%, #fcfcff 25%, #fcfcff 50%, #eeeeeb 50%, #eeeeeb 75%, #fcfcff 75%, #fcfcff);
     --h2-text               : #222;
     --h2-border             : #008348;
@@ -56,7 +63,7 @@
     --table-cell-bg         : #fefefe;  
     --abbr-border           : #D2D774;
     --code-text             : #222;
-    --code-bg               : #CCC;    
+    --code-bg               : #CCC;
 }
 
 /*******************************************************************************
@@ -99,6 +106,7 @@ footer {
  ******************************************************************************/
 body
 {
+    min-width: 1200px;
     font-family     :'Rounded Mplus 1c', serif;
     color           :var(--text-color);
     font-size       :25px;
@@ -138,6 +146,101 @@ nav a:hover {
 
 nav ul li:last-child {
     border  :none;
+}
+
+/*******************************************************************************
+ * ヘッダーの定義
+ ******************************************************************************/
+/* ヘッダーのレイアウト */
+header > div { /* ヘッダーの高さを固定する */
+    position    : relative;
+    height      :250px;
+    text-align  :center;
+    color       :var(--header-text-color);
+}
+
+header div#head-title { /* ヘッダーに表示するタイトル */
+    position            : absolute;
+    width               : 90%;
+    top                 : 50%;
+    left                : 50%;
+    -webkit-transform   : translateY(-50%) translateX(-50%);
+    transform           : translateY(-50%) translateX(-50%);    
+}
+
+header div.description { /* 説明文はヘッダの下部につくようにする */
+    position    : absolute;
+    left        : 0;
+    right       : 0;
+    bottom      : 5px;
+    font-size   : 32px;
+    font-weight : bold;
+    height      : 50px;
+    line-height : 50px;
+}
+
+/* 見出しのデフォルトスタイル */
+header h1 { /* 見出しは太字にする */
+    font-weight     : bold;
+    padding         : 2px 5px 2px 25px;
+    font-size       : 45px;
+    border-radius   : 50px;
+}
+
+header .default h1 {
+    background      : var(--page-default-bg);
+    color           : var(--text-neg-color);
+}
+
+header .single h1 {
+    background      : var(--page-single-bg);
+    color           : var(--text-neg-color);
+}
+
+header .category h1 {
+    background      : var(--page-category-bg);
+    color           : var(--text-neg-color);    
+}
+
+header .tag h1 {
+    background      : var(--page-tag-bg);
+    color           : var(--text-neg-color);
+}
+
+header .home h1 { /* ホームはもともと定義したスタイルを打ち消す。 */
+    padding     : 0;
+    font-size   : 110px;
+    color       : var(--header-text-color);
+}
+
+/* カテゴリ、タグラベル */
+header .category, header .tag {
+    vertical-align: text-bottom;
+}
+header .category a, header .tag a {
+    padding:0 10px;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* カテゴリラベル */
+header .category a {
+    background      : var(--page-category-bg);
+    color           : var(--text-neg-color);
+}
+
+header .category a:hover {
+    color : #C8EFEA;
+}
+
+/* タグラベル */
+header .tag a {
+    background      : var(--page-tag-bg);
+    color           : var(--text-neg-color);
+}
+
+header .tag a:hover {
+    color:#EBF182;
 }
 
 /*******************************************************************************
@@ -182,6 +285,10 @@ article h3{
 
 article h3:first-child{
     margin-top:0;
+}
+
+article img{
+    max-width:80%;
 }
 
 article h3:before { /* アイコン */
@@ -261,7 +368,7 @@ article a:hover{
 
 /* リスト */
 article ul{
-    margin-left:30px;
+    margin-left:20px;
 }
 
 article ul > li {
@@ -272,13 +379,13 @@ article ul > li {
 article ul > li:before {
     background      : var(--list-mark);
     content         : '';
-    width           : 12px;
-    height          : 12px;
+    width           : 19px;
+    height          : 19px;
     display         : inline-block;
     border-radius   : 100%;
     position        : relative;
     left            : -15px;
-    top             : -3px;
+    top             : 1px;
 }
 
 /* 数字付きリスト */
@@ -289,7 +396,8 @@ article ol {
 article ol > li {
     list-style: none;
     position: relative;
-    padding-left: 40px;
+    padding-left: 48px;
+    margin-bottom: 15px;
 }
  
 article ol > li:before {
@@ -297,15 +405,15 @@ article ol > li:before {
     color               : var(--list-mark-text);
     counter-increment   : li;
     content             : counter(li);
-    font-size           : 22px;
+    font-size           : 18px;
     border-radius       : 50%;
     text-align          : center;
-    width               : 28px;
-    height              : 28px;
+    width               : 36px;
+    height              : 36px;
     position            : absolute;
     left                : 0px;
-    top                 : 4px;
-    line-height         : 28px;
+    top                 : 1px;
+    line-height         : 36px;
 }
 
 /* 定義リスト */
@@ -405,6 +513,39 @@ footer {
     text-align:center;
 }
 
+/*******************************************************************************
+ * カテゴリページ用
+ ******************************************************************************/
+article div.category {
+    border : 1px solid var(--page-category-bg);
+    width  : 32%;
+    margin-left: 1.64%;
+    overflow:hidden;
+    float:left;
+    margin-bottom: 30px;
+}
+
+article div.category:first-child{
+    margin:0;
+}
+
+article div.category .header {
+    background: var(--page-category-bg);
+    color:var(--text-neg-color);
+    padding:10px;
+}
+
+article div.category li {
+    display:block;
+    border-bottom:1px dashed #666;
+    font-size:14px;
+    padding:7px
+}
+
+article div.category .footer {
+    background: var(--page-category-bg);
+    height:2px;
+}
 
 
 /*******************************************************************************
