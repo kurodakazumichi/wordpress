@@ -90,3 +90,7 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/** 独自のデバッグ機能を有効にする場合はDEVELOPをtrueに設定します。 */
+define("DEVELOP", true);
+define ('SAVEQUERIES', DEVELOP);
