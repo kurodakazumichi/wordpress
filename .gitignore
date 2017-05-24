@@ -3,3 +3,4 @@
 /wp-admin/php.log
 2017
 uploads
+*.log
