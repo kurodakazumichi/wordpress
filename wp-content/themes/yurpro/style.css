@@ -286,8 +286,12 @@ article h3:first-child{
     margin-top:0;
 }
 
+article div.images {
+    text-align:center;
+}
 article img{
-    max-width:80%;
+    vertical-align: top;
+    margin:10px;
 }
 
 article h3:before { /* アイコン */
@@ -541,17 +545,17 @@ article code {
 
 /* iフレーム */
 article div.frame {
-    position:relative;
-    width:100%;
+    position    :relative;
+    width       :100%;
 }
 
-article div.frame:before{
-    content:"";
-    display:block;
-    padding-top:56.25%;
+article div.frame:before{ /* 16:9の比率になるような設定 */
+    content     :"";
+    display     :block;
+    padding-top :56.25%;
 }
 
-article div.frame iframe{
+article div.frame iframe { /* 16:9 に設定 */
     position: absolute;
     top: 0;
     left: 0;

@@ -63,12 +63,38 @@ class EX {
      */
     private static function add_shortcode()
     {
-        add_shortcode("link", function($args){
-            $text = "<a href='$args[1]' title='$args[0]' target='_blank'>$args[0]</a>";
+        // リンクタグを生成するショートコード
+        // How to use.
+        // [link url={text} title={text} outside={0 or 1]
+        // [link "url" "title" "outside"]
+        add_shortcode("link", function($args) 
+        {
+            // パラメーター
+            extract(shortcode_atts(array(
+                "url"       => "/",
+                "title"     => "リンク",
+                "outside"   => 1,
+            ), $args));
+            
+            
+            if(isset($args[0])) $title   = $args[0];
+            if(isset($args[1])) $url     = $args[1];
+            if(isset($args[2])) $outside = $args[2];
+                
+            $blank = "";
+            if($outside != 0){
+                $blank = " target='_blank'";
+            }
+
+            $text = "<a href='$url' title='$title' $blank>$title</a>";
             return $text;
         });
         
-        add_shortcode("post", function($args) {
+        // WordPressの投稿に対するリンクを生成する
+        // How to use.
+        // [post id={投稿のID} title="表示するテキスト"]
+        add_shortcode("post", function($args) 
+        {
             extract(shortcode_atts(array(
                 "id"    => 0,
                 "title" => null,
@@ -83,20 +109,39 @@ class EX {
             return "<a href='$url' title='$title'>$title</a>";
         });
         
-        add_shortcode("image", function($args){
+        // 画像リンクを生成する(内部サイトのみ)
+        // How to use.
+        // [image src={画像パス、/以下のパス} title={画像タイトル} w={幅}]
+        add_shortcode("image", function($args)
+        {
             extract(shortcode_atts(array(
                 "src"    => "",
-                "title" => "画像",
+                "title"  => "画像",
+                "w"      => "95",
             ), $args));
             
-            $url = (wp_upload_dir()['baseurl']) . $src;
+            $url = (wp_upload_dir()['baseurl']);
             
-            return "<a href='$url' title='$title'><img src='$url' style='width:30%;' alt='$title'></a>";
+            $images = explode(",", $src);
+            
+            $text  = "<div class='images'>";
+            
+            foreach($images as $img) {
+                $text .= "<a href='$url.$img' title='$title'><img src='$url.$img' alt='$title' style='width:$w%'></a>";
+            }
+            
+            $text .= "</div>";
+            return $text;
             
             
+            //return "<a href='$url' title='$title'><img src='$url' style='width:30%;' alt='$title'></a>";
         });
         
-        add_shortcode("frame", function($args){
+        // インラインフレームを生成する
+        // How to use.
+        // [frame id={投稿のID} link={リンクを表示するかどうか}]
+        add_shortcode("frame", function($args)
+        {
             extract(shortcode_atts(array(
                 "id"    => 0,
                 "link"  => 1,
@@ -111,13 +156,14 @@ class EX {
             if($link != 0){
                 $text .= "<div style='text-align:right'><a href='$src' target='_blank'>別ウィンドウで開く</a></div>";
             }
-            
-
             return $text;
         });
      
-        add_shortcode("ths", function($args){
-           
+        // tableのthを複数作成する
+        // How to use.
+        // [ths "title,width" "title:width" ....]
+        add_shortcode("ths", function($args)
+        {
             foreach($args as $arg) {
                 
                 list($value, $width) = explode(",", $arg);
@@ -131,6 +177,9 @@ class EX {
             return $text;
         });  
         
+        // tableのtdを複数生成する
+        // How to use.
+        // [tds "title" "title" ....]
         add_shortcode("tds", function($args){
             foreach($args as $arg) {
                 $text .= "<td>$arg</td>";

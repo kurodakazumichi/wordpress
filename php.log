@@ -318,3 +318,9 @@ Stack trace:
 [23-May-2017 21:12:47 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 31
 [24-May-2017 01:42:05 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 40
 [24-May-2017 01:42:20 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 40
+[24-May-2017 04:10:01 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 124
+[24-May-2017 04:10:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 128
+[24-May-2017 04:10:01 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 124
+[24-May-2017 04:10:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 128
+[24-May-2017 04:10:01 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 124
+[24-May-2017 04:10:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 128
