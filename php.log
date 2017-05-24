@@ -257,3 +257,64 @@ Stack trace:
 #2 D:\Server\www\sample\public\wordpress\index.php(17): require('D:\\Server\\www\\s...')
 #3 {main}
   thrown in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\page-tags.php on line 5
+[23-May-2017 17:52:53 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 64
+[23-May-2017 17:53:47 UTC] PHP Parse error:  syntax error, unexpected end of file in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 119
+[23-May-2017 18:43:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function expload() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:69
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(345): EX::{closure}(Array, '<br />\nhoge<br ...', 'table')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(223): preg_replace_callback('/\\[(\\[?)(link|t...', 'do_shortcode_ta...', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#3 D:\Server\www\sample\public\wordpress\wp-includes\class-wp-hook.php(298): do_shortcode('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#4 D:\Server\www\sample\public\wordpress\wp-includes\plugin.php(203): WP_Hook->apply_filters('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...', Array)
+#5 D:\Server\www\sample\public\wordpress\wp-includes\post-template.php(240): apply_filters('the_content', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#6 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(4): the_content()
+#7 D:\S in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 69
+[23-May-2017 18:44:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function expload() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:69
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(345): EX::{closure}(Array, '<br />\nhoge<br ...', 'table')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(223): preg_replace_callback('/\\[(\\[?)(link|t...', 'do_shortcode_ta...', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#3 D:\Server\www\sample\public\wordpress\wp-includes\class-wp-hook.php(298): do_shortcode('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#4 D:\Server\www\sample\public\wordpress\wp-includes\plugin.php(203): WP_Hook->apply_filters('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...', Array)
+#5 D:\Server\www\sample\public\wordpress\wp-includes\post-template.php(240): apply_filters('the_content', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#6 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(4): the_content()
+#7 D:\S in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 69
+[23-May-2017 18:44:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function expload() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:69
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(345): EX::{closure}(Array, '<br />\nhoge<br ...', 'table')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(223): preg_replace_callback('/\\[(\\[?)(link|t...', 'do_shortcode_ta...', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#3 D:\Server\www\sample\public\wordpress\wp-includes\class-wp-hook.php(298): do_shortcode('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#4 D:\Server\www\sample\public\wordpress\wp-includes\plugin.php(203): WP_Hook->apply_filters('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...', Array)
+#5 D:\Server\www\sample\public\wordpress\wp-includes\post-template.php(240): apply_filters('the_content', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#6 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(4): the_content()
+#7 D:\S in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 69
+[23-May-2017 18:44:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function expload() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php:69
+Stack trace:
+#0 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(345): EX::{closure}(Array, '<br />\nhoge<br ...', 'table')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 D:\Server\www\sample\public\wordpress\wp-includes\shortcodes.php(223): preg_replace_callback('/\\[(\\[?)(link|t...', 'do_shortcode_ta...', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#3 D:\Server\www\sample\public\wordpress\wp-includes\class-wp-hook.php(298): do_shortcode('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#4 D:\Server\www\sample\public\wordpress\wp-includes\plugin.php(203): WP_Hook->apply_filters('<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...', Array)
+#5 D:\Server\www\sample\public\wordpress\wp-includes\post-template.php(240): apply_filters('the_content', '<h2>\xE7\x99\xBA\xE7\xAB\xAF</h2>...')
+#6 D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\single.php(4): the_content()
+#7 D:\S in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 69
+[23-May-2017 18:54:34 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 91
+[23-May-2017 19:17:19 UTC] PHP Parse error:  syntax error, unexpected ',' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:22:31 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:22:31 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:22:31 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:22:55 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:22:55 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:22:55 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 73
+[23-May-2017 19:29:28 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 67
+[23-May-2017 19:58:32 UTC] PHP Parse error:  syntax error, unexpected '}' in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 83
+[23-May-2017 21:07:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 42
+[23-May-2017 21:07:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 42
+[23-May-2017 21:07:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 43
+[23-May-2017 21:12:47 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 31
+[23-May-2017 21:12:47 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 31
+[23-May-2017 21:12:47 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 31
+[23-May-2017 21:12:47 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 31
+[24-May-2017 01:42:05 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 40
+[24-May-2017 01:42:20 UTC] PHP Warning:  A non-numeric value encountered in D:\Server\www\sample\public\wordpress\wp-content\themes\yurpro\functions.php on line 40

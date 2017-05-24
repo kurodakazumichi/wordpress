@@ -5,32 +5,18 @@ class EX {
     /**
      * 初期設定
      */
-    public static function init() {
+    public static function init() 
+    {
         add_theme_support('menus');
 
+        // 公開ページ上部にログインバーのせいで変な空白ができるので消す。
         add_filter( 'show_admin_bar', '__return_false' );
 
         add_theme_support('post-thumbnails');
 
-       
-        EX::add_sc_hoge();
-
+        // ショートコードの登録
+        EX::add_shortcode();
     }
-    
-    /**
-    * CSSを読み込むlinkタグを出力する関数
-    */
-    public static function load_css($css, $timestamp = true)
-    {
-        $url = get_template_directory_uri() . $css;
-
-        if ($timestamp)
-        {
-            $url .= "?" . filemtime(get_stylesheet_directory() . $css);
-        }
-
-        echo '<link rel="stylesheet" type="text/css" href="' . $url . '">';
-    }    
     
     /* ページのタイプを文字列で取得する */
     public static function get_page_type()
@@ -57,32 +43,6 @@ class EX {
         }
     }
     
-    public static function add_sc_code()
-    {
-        add_shortcode("code", function($args, $content = null)
-        {
-            
-            
-            $text ="
-                <pre class='lang:default decode:true ' >
-                $content
-                </pre>
-            ";
-            
-            return $text;
-        });
-    }
-    
-    public static function add_sc_hoge()
-    {
-        add_shortcode("hoge", function(){
-        $text ="
-            aaaaa
-        ";
-            return $text;
-        });
-    }
-    
     /**
      * 新着記事リストデータを取得する。
      * index.phpに表示する記事の取得を想定した実装。
@@ -96,8 +56,88 @@ class EX {
         $query .= "ORDER BY post_date DESC LIMIT 10";
 
         return $wpdb->get_results( $query );
-    }
+    }    
+    
+    /**
+     * ショートコードを登録する。
+     */
+    private static function add_shortcode()
+    {
+        add_shortcode("link", function($args){
+            $text = "<a href='$args[1]' title='$args[0]' target='_blank'>$args[0]</a>";
+            return $text;
+        });
+        
+        add_shortcode("post", function($args) {
+            extract(shortcode_atts(array(
+                "id"    => 0,
+                "title" => null,
+            ), $args));
+            
+            $url   = post_permalink($id);
+            
+            if(is_null($title)) {
+                $title = get_the_title($id);    
+            }
 
+            return "<a href='$url' title='$title'>$title</a>";
+        });
+        
+        add_shortcode("image", function($args){
+            extract(shortcode_atts(array(
+                "src"    => "",
+                "title" => "画像",
+            ), $args));
+            
+            $url = (wp_upload_dir()['baseurl']) . $src;
+            
+            return "<a href='$url' title='$title'><img src='$url' style='width:30%;' alt='$title'></a>";
+            
+            
+        });
+        
+        add_shortcode("frame", function($args){
+            extract(shortcode_atts(array(
+                "id"    => 0,
+                "link"  => 1,
+             ), $args));
+            
+            $src   = post_permalink($id);
+  
+            $text  = "<div class='frame'>";
+            $text .= "<iframe src='$src'></iframe>";
+            $text .= "</div>";
+            
+            if($link != 0){
+                $text .= "<div style='text-align:right'><a href='$src' target='_blank'>別ウィンドウで開く</a></div>";
+            }
+            
+
+            return $text;
+        });
+     
+        add_shortcode("ths", function($args){
+           
+            foreach($args as $arg) {
+                
+                list($value, $width) = explode(",", $arg);
+                
+                $text .= "<th";
+                if(!is_null($width)) {
+                    $text .= " style='width:$width%'";
+                }
+                $text .= ">$value</th>";
+            }
+            return $text;
+        });  
+        
+        add_shortcode("tds", function($args){
+            foreach($args as $arg) {
+                $text .= "<td>$arg</td>";
+            }
+            return $text;
+        });                
+    }
 }
 
 // 初期設定を行う。
