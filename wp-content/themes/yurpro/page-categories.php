@@ -4,7 +4,7 @@
     $categories = get_categories(array("parent" => 0, "hide_empty" => false, "exclude" => "1"));
 ?>
 
-<div class="clearfix">
+<div class="clearfix" style="margin-bottom:20px;">
 <?php foreach ($categories as $key => $cate): ?>
 
 
@@ -27,7 +27,7 @@
 
     <?php if((($key + 1) % 3) == 0): ?>
     
-</div><div class="clearfix">
+</div><div class="clearfix" style="margin-bottom:20px;">
     <?php endif; ?>
     
 <?php endforeach; ?>

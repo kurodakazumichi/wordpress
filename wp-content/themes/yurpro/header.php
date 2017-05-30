@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta charset="utf-8">
         <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
@@ -32,11 +32,13 @@
                             <?php if(is_single()): ?>
                                <span class="date"><?php echo get_the_date(); ?></span>
                             <?php endif; ?>
-                            <?php if(has_category() && (is_single() || is_category())): ?>
-                                <span class="category"><?php the_category(" "); ?></span>
-                            <?php endif; ?>
-                            <?php if(has_tag()): ?>
-                                <span class="tag"><?php the_tags("", " "); ?></span>
+                            <?php if(is_single()): ?>
+                                <?php if(has_category()): ?>
+                                    <span class="category"><?php the_category(" "); ?></span>
+                                <?php endif; ?>
+                                <?php if(has_tag()): ?>
+                                    <span class="tag"><?php the_tags("", " "); ?></span>
+                                <?php endif; ?>
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>                        

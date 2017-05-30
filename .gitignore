@@ -4,3 +4,6 @@
 2017
 uploads
 *.log
+/wp-content/themes/yurpro/assets/js
+/wp-content/themes/yurpro/assets/560
+/wp-content/themes/yurpro/assets/668

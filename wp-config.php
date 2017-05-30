@@ -92,5 +92,5 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 
 /** 独自のデバッグ機能を有効にする場合はDEVELOPをtrueに設定します。 */
-define("DEVELOP", true);
+define("DEVELOP", false);
 define ('SAVEQUERIES', DEVELOP);
